@@ -1,0 +1,25 @@
+/* [project]/app/page.module.css [app-client] (css) */
+.page-module__E0kJGG__header {
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 56px;
+  padding: 0 10px;
+  display: flex;
+  box-shadow: inset 1px 1px #0000001a, inset 0 -1px #00000012;
+}
+
+.page-module__E0kJGG__header .page-module__E0kJGG__headerItem {
+  height: 39.5px;
+  padding: 10px 12px;
+}
+
+.page-module__E0kJGG__header:hover {
+  box-shadow: 0 4px 6px #0000001a;
+}
+
+.page-module__E0kJGG__page {
+  background-color: #00f;
+}
+
+/*# sourceMappingURL=app_page_module_css_f9ee138c._.single.css.map*/

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///Users/hjchu/Documents/GitHub/hjchu95.github.io/app/globals.css"],"sourcesContent":[":root {\n  --background: #ffffff;\n  --foreground: #171717;\n}\n\nhtml,\nbody {\n  width: 100vw;\n  height: 100vh;\n  overflow-x: hidden;\n}\n\nbody {\n  color: var(--foreground);\n  background: var(--background);\n  font-family: Arial, Helvetica, sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\n* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n}\n\na {\n  color: inherit;\n  text-decoration: none;\n}\n"],"names":[],"mappings":"AAAA;;;;;AAKA;;;;;;AAOA;;;;;;;;AAQA;;;;;;AAMA","debugId":null}},
+    {"offset": {"line": 33, "column": 0}, "map": {"version":3,"sources":["file:///Users/hjchu/Documents/GitHub/hjchu95.github.io/app/page.module.css"],"sourcesContent":[".header {\n  height: 56px;\n  display: flex;\n  padding: 0 10px;\n  flex-direction: row;\n  justify-content: flex-end;\n  align-items: center;\n  box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);\n\n  .headerItem {\n     height: 39.5px;\n     padding: 10px 12px;\n  }\n}\n\n.header:hover {\n  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\n}\n\n.page {\n  background-color: blue;\n}"],"names":[],"mappings":"AAAA;;;;;;;;;;AASE;;;;;AAMF;;;;AAIA","debugId":null}}]
+}
