@@ -1,3 +1,12 @@
+---
+permalink: /research/
+title: ""
+author_profile: true
+redirect_from: 
+  - /research/
+  - /research.html
+---
+
 ## Publications
 
 ## Working Papers
