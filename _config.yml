@@ -25,9 +25,7 @@ author:
   avatar           : "profile.png"
   name             : "Hyun Jae Stephen Chu"
   pronouns         : # example: "she/her"  
-  bio              : |
-    Research Analyst @ NABO
-    Graduate Student @ ND
+  bio              : "Research Analyst @ NABO" <br> "Graduate Student @ ND"
   location         : "Seoul, South Korea"
   employer         : "Red Brick University"
   uri              : # URL
