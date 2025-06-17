@@ -219,7 +219,7 @@ collections:
   teaching:
     output: true
     permalink: /:collection/:path/
-  research:
+  publication:
     output: true
     permalink: /:collection/:path/
   portfolio:
@@ -259,10 +259,10 @@ defaults:
       author_profile: true
       share: true
       comments: true
-  # _research
+  # _publication
   - scope:
       path: ""
-      type: research
+      type: publication
     values:
       layout: single
       author_profile: true
