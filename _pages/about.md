@@ -8,7 +8,8 @@ redirect_from:
 ---
 
 **Current Position**
-Ph.D. Student, Economics, University of Notre Dame</p>
+Ph.D. Student, Economics, University of Notre Dame
+
 Research Analyst, National Assembly Budget Office (NABO)
 
 **Research Interests**
