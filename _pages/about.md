@@ -7,11 +7,11 @@ redirect_from:
   - /about.html
 ---
 
-**Current Position**</p>
-Ph.D. Student, Economics, University of Notre Dame</p>
+**Current Position**  
+Ph.D. Student, Economics, University of Notre Dame  
 Research Analyst, National Assembly Budget Office (NABO)
 
-**Research Interests**</p>
+**Research Interests**  
 Econometrics, Macroeconomics, International Finance, Machine Learning, Monetary Policy
 
 **Curriculum Vitae** [[PDF]](http://hjchu95.github.io/files/CV_250428.pdf)
