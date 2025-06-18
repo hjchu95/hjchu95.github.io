@@ -9,4 +9,6 @@ redirect_from:
 
 {% include base_path %}
 
- 
+## Courses  
+
+## Lecture Notes
