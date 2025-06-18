@@ -256,6 +256,8 @@ defaults:
       author_profile: false
       share: false
       comments: true
+      sidebar:
+        nav: "docs"
   # _research
   - scope:
       path: ""
