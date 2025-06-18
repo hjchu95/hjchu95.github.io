@@ -2,10 +2,10 @@
 permalink: /research/
 title: ""
 author_profile: true
-show_date: false
 redirect_from: 
   - /research/
   - /research.html
+date: false
 ---
 
 ## Publications
