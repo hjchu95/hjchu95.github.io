@@ -11,9 +11,6 @@ main:
   - title: "Research"
     url: /research/
 
-  - title: "Talks"
-    url: /talks/    
-
   - title: "Teaching"
     url: /teaching/    
     
@@ -25,9 +22,3 @@ main:
     
   - title: "CV"
     url: /cv/
-    
-  # - title: "CV"
-  #   url: /cv-json/
-    
-  - title: "Guide"
-    url: /markdown/
