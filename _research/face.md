@@ -5,7 +5,7 @@ author_profile: true
 redirect_from: 
   - /research/
   - /research.html
-date: false
+date: 2000-01-01
 ---
 
 ## Publications
