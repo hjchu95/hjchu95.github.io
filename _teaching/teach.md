@@ -6,3 +6,5 @@ redirect_from:
   - /teaching/
   - /teaching.html
 ---
+
+{% include base_path %}
