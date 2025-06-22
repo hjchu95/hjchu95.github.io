@@ -265,7 +265,6 @@ defaults:
       author_profile: true
       share: false
       comments: true
-      date: false
   # _projects
   - scope:
       path: ""
