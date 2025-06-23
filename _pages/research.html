@@ -9,12 +9,26 @@ date: false
 
 {% include base_path %}
 
+<!-- <h2 id="publication">Publications</h2>
+<ul>
+  <li>
+    <a href="{{ base_path }}/teaching/2024-Spring-IntFinance-KU/">International Finance (Graduate)</a>,
+    Teaching Assistant, Korea University
+  </li>
+</ul>
+
+<h2 id="workingpaper">Working Papers</h2>
+<ul>
+  <li>
+    <p><strong>"A Time-varying Bayesian Variable Selection for Macroeconomic Forecasting"</strong>
+      (with <a href="https://sites.google.com/site/jaehoecon/home">Jaeho Kim</a> and <a href="https://faculty.korea.ac.kr/kufaculty/kyuho/index.do">Kyu Ho Kang</a>)</p>
+  </li>
+</ul> -->
+
+
 <!-- New style rendering if publication categories are defined -->
 {% for item in site.research %}
   {% if item.path contains "face.md" %}
     {{ item.content }}
   {% endif %}
 {% endfor %}
-
-
-
