@@ -14,5 +14,4 @@ Research Analyst, National Assembly Budget Office (NABO)
 **Research Interests**  
 Econometrics, Macroeconomics, International Finance, Machine Learning, Monetary Policy
 
-**Curriculum Vitae** [[PDF]](http://hjchu95.github.io/files/CV/CV_250428.pdf)  
-<!-- **한글이력서** [[PDF]](http://hjchu95.github.io/files/CV/CV_Korean_250428.pdf) -->
+**Curriculum Vitae** [[PDF]](http://hjchu95.github.io/files/CV/CV_250428.pdf)
