@@ -18,9 +18,12 @@ redirect_from:
 
 <ul>
   <li>
-    <p><strong>"A Time-varying Bayesian Variable Selection for Macroeconomic Forecasting"</strong>
+    <p>
+    <strong>"A Time-varying Bayesian Variable Selection for Macroeconomic Forecasting"</strong>
     (with <a href="https://sites.google.com/site/jaehoecon/home">Jaeho Kim</a> and
-    <a href="https://faculty.korea.ac.kr/kufaculty/kyuho/index.do">Kyu Ho Kang</a>)</p>
+    <a href="https://faculty.korea.ac.kr/kufaculty/kyuho/index.do">Kyu Ho Kang</a>), 
+    <a href="{{ base_path }}/research/TimeVaryingBVS_WorkingPaper/">[WP version]</a> <a href="{{ base_path }}/research/TimeVaryingBVS_SupplementaryAppendix">[Supplementary Appendix]</a>
+    </p>
   </li>
 </ul>
 
