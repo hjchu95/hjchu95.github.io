@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "International Finance"
+author_profile: true
 collection: teaching
 type: "Graduate Course"
 permalink: /teaching/2024-Spring-IntFinance-KU/
