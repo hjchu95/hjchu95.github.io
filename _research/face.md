@@ -6,6 +6,9 @@ redirect_from:
   - /research/
   - /research.html
 ---
+
+{% include base_path %}
+
 <h2 style="border-bottom: none;">Publications</h2>
 
 <ul>
