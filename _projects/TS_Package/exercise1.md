@@ -22,5 +22,14 @@ Now the type of 'request parameters' that consist the URL link will be explained
 
 ### (1) ECOS
 The baseline URL for the ECOS Open API is as follows:
-<pre><code>https://ecos.bok.or.kr/api/StatisticSearch/key/xml/kr/start_page/end_page/main_code/data_frequency/start_date/end_date/sub_code1/sub_code2/sub_code3/sub_code4</code></pre>
+<pre><code>https://ecos.bok.or.kr/api/StatisticSearch/key/format/lang/start_page/end_page/main_code/data_frequency/start_date/end_date/sub_code1/sub_code2/sub_code3/sub_code4</code></pre>
 
+Here, `key`, refers to value entered above, and the following box explains each request parameter in detail.
+
+> 1. `format` (file format)  
+>   : file format of the result. Can choose either `xml` or `json`.  
+> 2. `lang` (language)  
+>   : language of the result value. Can choose either `kr` for Korean or `en` for English.  
+> 3. `start_page` & `end_page` (start and end number of requests)  
+>   : start and end numbers within the full set of results. The start page should always be set to 1, and the end page can be an arbitrarily large number depending on the expected data volume.  
+> 4. `main_code`
