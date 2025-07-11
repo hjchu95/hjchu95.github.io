@@ -10,7 +10,7 @@ collection: projects
 
 This exercise will show how to download macroeconomic data for South Korea and the United States using Open API, which will be used throughout this time series package. These data can be obtained from the Economic Statistics System (ECOS) of the Bank of Korea (BOK) and the Federal Reserve Economic Data (FRED) provided by the Federal Reserve Bank of St. Louis.
 
-### Request Parameters
+## Request Parameters
 A convenient way to download multiple datasets at once is by using an Open API. The basic principle of using an Open API is that a specific URL, constructed with a combination of 'request parameters', returns data in text format based on those parameters. This text-based data can then be retrieved using web crawling techniques.
 
 Before diving into the details, you must first obtain an API key to use the Open API. This key functions like a password that grants access to the API and can be obtained by the following websites:  
@@ -76,7 +76,7 @@ In detail, the series ID codes is identical to the abbreviation of each variable
 
 For example, when searching the Gross Domestic Product (GDP) in the search bar, the top result is `Gross Domestic Product`. Under this entry, one can see the link labeled `6 other formats` and clicking this link reveals various versions of the GDP variable. In detail, the series ID code of the seasonally adjusted quarterly Nominal GDP is `GDP`, while the seasonally not adjusted quarterly Nominal GDP is `GDPA`.
 
-### Constructing the Code Dictionary and Using Functions
+## Constructing the Code Dictionary and Using Functions
 For convenience, a dictionary will be created to manage the statistical codes. In the `ex0_openAPI.m` file, all request parameter sets for the desired variables will be stored in a objective named `code_dictionary`.
 
 Using the obtained API key, the code dictionary, and options containing information such as start and end dates, one can download and construct a table variable by using the `ecos_api` and `fred_api` functions for the ECOS and FRED cases, respectively.
@@ -100,14 +100,14 @@ Each function is consisted of the following input variables:
 > - **Outputs**:  
 >   `US_df`: Table of variables
 
-### Cleaning the US Data
+## Cleaning the US Data
 One important note when using the FRED Open API is that the data retrieved may have different reporting frequencies. For example, variables such as GDP and PCE are reported on a quarterly basis, whereas the Federal Funds Rate and the 10-year Treasury Yield are available monthly. When downloading these series together, the merged dataset will follow the monthly frequency. As a result, the monthly data will have values for every month, while the quarterly data will only have values for January, April, July, and October of each year.
 
 Therefore, it is necessary to clean the data appropriately depending on its frequency. Specifically, for quarterly data, the rows corresponding to non-quarter-end months should be discarded. For monthly data, the values should be aggregated to quarterly frequency-by computing the average of the three monthly values within each quarter.
 
 These cleaning steps are stated in the fourth section of the `ex0_openAPI.m` code.
 
-### Saving the Data
+## Saving the Data
 Finally, the downloaded data will be saved in a single Excel file. The name of the Excel file is controlled by an object called `filename`, and the data for each country are stored in separate sheets within that file.
 
 [[Back to Previous Page]]({{ "/projects/TS_Package_MATLAB" | relative_url }})
