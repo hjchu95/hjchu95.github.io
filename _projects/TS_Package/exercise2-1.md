@@ -12,3 +12,6 @@ In this exercise, we will plot several macroeconomic variables for the United St
 
 ## Seasonality
 Before diving into the details, one must note that the quarterly nominal and real GDP data (GDP and GDPC1) obtained from FRED is an annualized rate.
+
+
+[[Back to Previous Page]]({{ "/projects/TS_Package_MATLAB" | relative_url }})
