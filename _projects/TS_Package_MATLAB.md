@@ -15,4 +15,7 @@ The usage of the functions in the package and the interpretation of their output
 
 - [Exercise 1]({{ "/projects/TS_Package_MATLAB/exercise1/" | relative_url }}): Downloading data from ECOS and FRED using Open API
 - [Exercise 2-1]({{ "/projects/TS_Package_MATLAB/exercise2-1/" | relative_url }}): Plotting the US Macroeconomic data
-    - Exercise 2-2
+    - Exercise 2-2  
+
+
+[[Back to Previous Page]]({{ "/projects" | relative_url }})
