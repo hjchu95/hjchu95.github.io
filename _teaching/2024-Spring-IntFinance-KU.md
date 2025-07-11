@@ -17,3 +17,5 @@ date: 2024-06-24
 **Roles:**
 1. TA session explaining the Bayesian estimation of linear models with error terms that follow a student-t distribution (Gibbs-sampling).
 2. TA session explaining the Bayesian estimation of identifying structural VAR models under short-term and long-term restrictions.
+
+[[Back to Previous Page]]({{ "/teaching" | relative_url }})
