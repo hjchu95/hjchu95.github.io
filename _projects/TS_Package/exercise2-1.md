@@ -10,8 +10,17 @@ collection: projects
 
 In this exercise, we will plot several macroeconomic variables for the United States and use these plots to introduce time series data and key macroeconomic indicators. Specifically, we will cover the concept of seasonality in time series data, the identity relationship between real GDP, nominal GDP, and the implicit price deflator (GDP deflator), differences between various price indices, labor market indicators and Okun's law.
 
-## Seasonality
-Before diving into the details, one must note that the quarterly nominal and real GDP data (GDP and GDPC1) obtained from FRED is an annualized rate. This means that the quarterly data is multiplied by 4 to be expressed as the annualized rate. The reason of annulization is to ...
+## Annualization
+Before diving into the details, it is important to note that the quarterly nominal and real GDP data (`GDP` and `GDPC1`) obtained from FRED are reported at annualized rates. This means that the quarterly values are multiplied by four to express what the total would be if the level of economic activity observed in that quarter were maintained for an entire year.
 
+The reason for annualization lies in both policy practicality and comparability. Specifically, annualized figures provide the intuitive sense of "What would the annual total be if this quarterly pace continued for a full year?" This makes it easier to understand the scale of a country's economy from an annual perspective. In fact, annualized values are commonly used in the United States, where economic reporting and policymaking often focus on annual growth trends. The use of annualized data allows analysts and decision makers to evaluate quarterly movements within a familiar yearly framework.
+
+However, when the goal is to compare multiple quarterly macroeconomic variables, it is necessary to convert annulized GDP values to its quarterly level. To do so, the seasonally adjusted nominal and real GDP figures are divided by 4.
+
+Also, we standardize the units of measurement by expressing all GDP values in billions of dollars. Specifically, nominal GDP figures that are not seasonally adjusted and reported in millions of dollars are converted to billions by dividing them by 1,000.
+
+## Seasonality
+<iframe src="/projects/TS_Package/ex2-1/figure1a.html" width="725px" height="470px" style="border:none; display:block; margin:auto;"></iframe>
+When plotting quarterly or monthly time series data, it is common to observe a recurring pattern in the series. 
 
 [[Back to Previous Page]]({{ "/projects/TS_Package_MATLAB" | relative_url }})
