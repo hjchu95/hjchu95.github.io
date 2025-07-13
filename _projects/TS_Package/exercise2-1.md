@@ -20,7 +20,26 @@ However, when the goal is to compare multiple quarterly macroeconomic variables,
 Also, we standardize the units of measurement by expressing all GDP values in billions of dollars. Specifically, nominal GDP figures that are not seasonally adjusted and reported in millions of dollars are converted to billions by dividing them by 1,000.
 
 ## Seasonality
-<iframe src="/projects/TS_Package/ex2-1/figure1a.html" width="725px" height="470px" style="border:none; display:block; margin:auto;"></iframe>
+<!-- <iframe src="/projects/TS_Package/ex2-1/figure1a.html" width="725px" height="470px" style="border:none; display:block; margin:auto;"></iframe> -->
+<div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+
+  <!-- Left plot -->
+  <div style="transform: scale(0.85); transform-origin: top left; width: 820px; height: 550px; overflow: hidden;">
+    <iframe src="/projects/TS_Package/ex2-1/figure1a.html"
+            width="960" height="600"
+            style="border: none;">
+    </iframe>
+  </div>
+
+  <!-- Right plot -->
+  <div style="transform: scale(0.85); transform-origin: top left; width: 820px; height: 550px; overflow: hidden;">
+    <iframe src="/projects/TS_Package/ex2-1/figure1b.html"
+            width="960" height="600"
+            style="border: none;">
+    </iframe>
+  </div>
+
+</div>
 When plotting quarterly or monthly time series data, it is common to observe a recurring pattern in the series. 
 
 [[Back to Previous Page]]({{ "/projects/TS_Package_MATLAB" | relative_url }})
