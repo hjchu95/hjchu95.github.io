@@ -19,27 +19,17 @@ However, when the goal is to compare multiple quarterly macroeconomic variables,
 
 Also, we standardize the units of measurement by expressing all GDP values in billions of dollars. Specifically, nominal GDP figures that are not seasonally adjusted and reported in millions of dollars are converted to billions by dividing them by 1,000.
 
-## Seasonality
-<!-- <iframe src="/projects/TS_Package/ex2-1/figure1a.html" width="725px" height="470px" style="border:none; display:block; margin:auto;"></iframe> -->
-<div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+## Trend, Seasonality and Transformation
+When applying time series analysis, it is useful to plot and detect those properties of the series by observing the graphical representation.
 
-  <!-- Left plot -->
-  <div style="transform: scale(0.85); transform-origin: top left; width: 820px; height: 550px; overflow: hidden;">
-    <iframe src="/projects/TS_Package/ex2-1/figure1a.html"
-            width="960" height="600"
-            style="border: none;">
-    </iframe>
-  </div>
-
-  <!-- Right plot -->
-  <div style="transform: scale(0.85); transform-origin: top left; width: 820px; height: 550px; overflow: hidden;">
-    <iframe src="/projects/TS_Package/ex2-1/figure1b.html"
-            width="960" height="600"
-            style="border: none;">
-    </iframe>
-  </div>
-
+<iframe src="/projects/TS_Package/ex2-1/figure1a.html" width="725px" height="475px" style="border:none; display:block; margin:auto;"></iframe>
+<div style="text-align: center; font-weight: bold; font-size: 16px; margin-top: -30px; margin-bottom: 20px">
+  Figure 1. The nominal GDP level of the United States
 </div>
-When plotting quarterly or monthly time series data, it is common to observe a recurring pattern in the series. 
+
+Figure 1 shows the seasonally adjusted and non-seasonally adjusted series of the Nominal GDP of the United States. Specifically, one can observe that the series of nominal GDP increases in the long run, i.e. has a positive trend. There are two notable shifts in the series, corresponding to the 2008 global financial crisis and the 2020 COVID-19 shock. In addition, the non-seasonally adjusted series, depicted by the blue line, shows an apparent “jagged” pattern within each year. These are referred to as “seasonal variations”. Typical examples include sharp increases in personal consumption expenditures (PCE) during the second or fourth quarters, which coincide with the summer vacation and end-of-year holiday seasons, as well as swings in construction investment, which tends to rise during the spring and summer months and decline in the winter.
+
+When the objective is to compare changes over time, it is desirable to eliminate seasonality prior to conducting the analysis. This is because such predictable seasonal patterns can distort the underlying relationship between quarters and make meaningful comparisons more difficult. Therefore, unless there is a specific reason, it is standard practice in macroeconomic analysis to use seasonally adjusted series, depicted in orange.
+
 
 [[Back to Previous Page]]({{ "/projects/TS_Package_MATLAB" | relative_url }})
