@@ -28,7 +28,7 @@ Following Persons (1919), time series data are said to consist of three main uno
             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
     </iframe>
   </div>
-  <div style="text-align: center; font-weight: bold; font-size: 16px; margin-top: -10px; margin-bottom: 20px">
+  <div style="text-align: center; font-weight: bold; font-size: 16px; margin-top: 0px; margin-bottom: 20px">
     Figure 1. The nominal GDP level of the United States
   </div>
 </div>
@@ -43,7 +43,7 @@ When the objective is to compare changes over time, it is desirable to eliminate
             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
     </iframe>
   </div>
-  <div style="text-align: center; font-weight: bold; font-size: 16px; margin-top: -10px; margin-bottom: 20px">
+  <div style="text-align: center; font-weight: bold; font-size: 16px; margin-top: 0px; margin-bottom: 20px">
     Figure 2. Quarterly changes of the nominal GDP level of the United States
   </div>
 </div>
@@ -52,11 +52,11 @@ Now we delve deeper into the details and discuss various transformation methods 
 
 However, transformation methods such as **Figure 2** have a limitation in that it does not account for the scale effect of the variable. Specifically, the amplitude of the series appears to increase over time, which is likely attributable to the expansion of the economy, i.e. the rising level of nominal GDP of the United States. To remove this scale effect, it is common to transform the series into quarterly growth rates. In this case, the growth rate is calculated as follows:
 \begin{equation}
-    g_{gdp} = \frac{GDP_{t}-GDP_{t-1}}{GDP_{t-1}}\cdot 100 \notag
+    qg_{gdp} = \frac{GDP_{t}-GDP_{t-1}}{GDP_{t-1}}\cdot 100 \notag
 \end{equation}
 The problem with this representation, however, is that it introduces asymmetry between positive and negative changes. For example, a positive change from 100 to 125 corresponds to a 25% increase, while a negative change from 125 to 100 amounts to a 20% decrease. As a result, when calculating the average growth rate for a highly volatile series, the average can be biased. In an extreme case, the average growth rate can be calculated in spite of a negative trend. To address this issue, the most commonly used method is to employ the *continuous growth rate*, which approximates the growth rate as follows:
 \begin{equation}
-    g_{gdp}\approx (\ln{GDP_{t}}-\ln{GDP_{t-1}})\cdot 100 \notag
+    qg_{gdp}\approx (\ln{GDP_{t}}-\ln{GDP_{t-1}})\cdot 100 \notag
 \end{equation}
 <div style="position: relative; width: 100%; max-width: 725px; margin: auto;">
   <div style="position: relative; padding-bottom: 65%; height: 0;">
@@ -64,12 +64,45 @@ The problem with this representation, however, is that it introduces asymmetry b
             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
     </iframe>
   </div>
-  <div style="text-align: center; font-weight: bold; font-size: 16px; margin-top: -10px; margin-bottom: 20px">
+  <div style="text-align: center; font-weight: bold; font-size: 16px; margin-top: 0px; margin-bottom: 20px">
     Figure 3. Quarterly growth rate of the nominal GDP level of the United States
   </div>
 </div>
 
-**Figure 3** depicts the quarterly growth rate of U.S. nominal GDP, calculated as the log difference between consecutive quarters. Similar to **Figure 2**, the long-term trend is removed, while seasonal fluctuations remain. However, unlike the level-differenced series in **Figure 2**, the volatility of the series does not exhibit an increasing pattern over time. Rather, the series fluctuates around zero with a relatively stable amplitude. Interestingly, the volatility appears relatively larger prior to the 1980s, gradually decreasing thereafter, and shows a temporary spike around 2020 before stabilizing in the subsequent period.
+**Figure 3** above depicts the quarterly growth rate of U.S. nominal GDP, calculated as the log difference between consecutive quarters. Similar to **Figure 2**, the long-term trend is removed, while seasonal fluctuations remain. However, unlike the level-differenced series in **Figure 2**, the volatility of the series does not exhibit an increasing pattern over time. Rather, the series fluctuates around zero with a relatively stable amplitude. Interestingly, the volatility appears relatively larger prior to the 1980s, gradually decreasing thereafter, and shows a temporary spike around 2020 before stabilizing in the subsequent period.
+
+<div style="position: relative; width: 100%; max-width: 725px; margin: auto;">
+  <div style="position: relative; padding-bottom: 65%; height: 0;">
+    <iframe src="/projects/TS_Package/ex2-1/figure1e.html"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+    </iframe>
+  </div>
+  <div style="text-align: center; font-weight: bold; font-size: 16px; margin-top: 0px; margin-bottom: 20px">
+    Figure 4. Annual changes of the nominal GDP level of the United States
+  </div>
+</div>
+
+Until now, various transformation methods that eliminate the trend while retaining seasonality in the series have been introduced. If the objective is to remove both the trend and seasonality, it is necessary to apply year-on-year (YoY) difference transformation ($$\Delta_{4}GDP_{t} = GDP_{t} - GDP_{t-4}$$) rather than the previous quarterly-on-quarter differencing. **Figure 4** depicts the year-on-year differenced series of the U.S. quarterly nominal GDP. A key characteristic of this series is that both the trend and seasonal fluctuations are no longer visible. Furthermore, the annual changes are generally positive, turning negative only during periods of recession. Specifically, the series shows negative changes only during the 2008 financial crisis and the 2020 COVID-19 shock.
+
+Similar to the QoQ differencing, the YoY differenced series in **Figure 4** does not account for the scale of the variable. As a result, the amplitude of fluctuations tends to increase over time, reflecting the expansion of the nominal GDP level. To address this scale effect, it is common to transform the series into an approximate annual growth rate as follows:
+\begin{equation}
+    ag_{gdp} = \ln{GDP_{t}} - \ln{GDP_{t-4}}\cdot 100 \notag
+\end{equation}
+
+<div style="position: relative; width: 100%; max-width: 725px; margin: auto;">
+  <div style="position: relative; padding-bottom: 65%; height: 0;">
+    <iframe src="/projects/TS_Package/ex2-1/figure1f.html"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+    </iframe>
+  </div>
+  <div style="text-align: center; font-weight: bold; font-size: 16px; margin-top: 0px; margin-bottom: 20px">
+    Figure 5. Annual growth rate of the nominal GDP level of the United States
+  </div>
+</div>
+
+**Figure 5** above illustrates the annual growth rate of U.S. nominal GDP. From the 1960s to 1980s, the U.S. exhibited a relatively high average nominal GDP growth rates, ranging between 2-15%, along with considerable volatility. This was largely driven by post-war industrialization, population growth, and external shocks such as the two oil crises in 1973 and 1979. Since the 1990s, however, the U.S. economy has experienced both lower growth rates and reduced volatility, commonly referred to as the Great Moderation, reflecting a combination of low inflation, slowing productivity growth, and demographic shifts. Two notable exceptions occurred in 2008 and 2020, during which volatility spiked and negative growth rates were observed. In particular, during the COVID-19 pandemic, year-on-year nominal GDP growth sharply turned negative, followed by a rapid recovery driven by expansionary fiscal spending, with growth rates reaching around 15%-levels comparable to those of the 1960s-1980s-before reverting to the recent trend levels.
+
+## Nominal and Real GDP
 
 ### Reference
 - Gar$$\imath$$n, J., Lester, R., & Sims, E. (2018), "Intermediate macroeconomics," This Version, 3(0).
