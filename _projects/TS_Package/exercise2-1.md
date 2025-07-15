@@ -4,7 +4,6 @@ title: "Exercise 2-1. Plotting Macroeconomic data of the US"
 author_profile: true
 permalink: /projects/TS_Package_MATLAB/exercise2-1/
 collection: projects
-math: true
 ---
 <br>
 **[Link to Code]:** <a href="https://github.com/hjchu95/Time_Series_Package/blob/main/Exercises/ex1_1_PlotData_US.m" target="_blank">ex1_1_PlotData_US.m</a>
@@ -23,21 +22,57 @@ Also, we standardize the units of measurement by expressing all GDP values in bi
 ## Trend, Seasonality and Transformation
 Following Persons (1919), time series data are said to consist of three main unobservable components: the trend, cyclical and seasonal components. The trend refers to long-run development, while the cyclical component captures fluctuations lasting more than one year. The seasonal component represents recurring movements within a year. When applying time series analysis, it is useful to visualize and detect those properties by examining the graphical representation of the series.
 
-<iframe src="/projects/TS_Package/ex2-1/figure1a.html" width="725px" height="475px" style="border:none; display:block; margin:auto;"></iframe>
-<div style="text-align: center; font-weight: bold; font-size: 16px; margin-top: -30px; margin-bottom: 20px">
-  Figure 1. The nominal GDP level of the United States
+<div style="position: relative; width: 100%; max-width: 725px; margin: auto;">
+  <div style="position: relative; padding-bottom: 65%; height: 0;">
+    <iframe src="/projects/TS_Package/ex2-1/figure1a.html"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+    </iframe>
+  </div>
+  <div style="text-align: center; font-weight: bold; font-size: 16px; margin-top: -10px; margin-bottom: 20px">
+    Figure 1. The nominal GDP level of the United States
+  </div>
 </div>
 
-Figure 1 shows the seasonally adjusted and non-seasonally adjusted series of the Nominal GDP of the United States. Specifically, one can observe that the series of nominal GDP increases in the long run, i.e. has a positive trend. There are two notable shifts in the series, corresponding to the 2008 global financial crisis and the 2020 COVID-19 shock. In addition, the non-seasonally adjusted series, depicted by the blue line, shows an apparent “jagged” pattern within each year. These are referred to as “seasonal variations”. Typical examples include sharp increases in personal consumption expenditures (PCE) during the second or fourth quarters, which coincide with the summer vacation and end-of-year holiday seasons, as well as swings in construction investment, which tends to rise during the spring and summer months and decline in the winter.
+**Figure 1** shows the seasonally adjusted and non-seasonally adjusted series of the Nominal GDP of the United States. Specifically, one can observe that the series of nominal GDP increases in the long run, i.e. has a positive trend. There are two notable shifts in the series, corresponding to the 2008 global financial crisis and the 2020 COVID-19 shock. In addition, the non-seasonally adjusted series, depicted by the blue line, shows an apparent “jagged” pattern within each year. These are referred to as “seasonal variations”. Typical examples include sharp increases in personal consumption expenditures (PCE) during the second or fourth quarters, which coincide with the summer vacation and end-of-year holiday seasons, as well as swings in construction investment, which tends to rise during the spring and summer months and decline in the winter.
 
 When the objective is to compare changes over time, it is desirable to eliminate seasonality prior to conducting the analysis. This is because such predictable seasonal patterns can distort the underlying relationship between quarters and make meaningful comparisons more difficult. Therefore, unless there is a specific reason, it is standard practice in macroeconomic analysis to use seasonally adjusted series, depicted in orange.
 
-<iframe src="/projects/TS_Package/ex2-1/figure1c.html" width="725px" height="475px" style="border:none; display:block; margin:auto;"></iframe>
-<div style="text-align: center; font-weight: bold; font-size: 16px; margin-top: -30px; margin-bottom: 20px">
-  Figure 2. Quarterly changes of the nominal GDP level of the United States
+<div style="position: relative; width: 100%; max-width: 725px; margin: auto;">
+  <div style="position: relative; padding-bottom: 65%; height: 0;">
+    <iframe src="/projects/TS_Package/ex2-1/figure1c.html"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+    </iframe>
+  </div>
+  <div style="text-align: center; font-weight: bold; font-size: 16px; margin-top: -10px; margin-bottom: 20px">
+    Figure 2. Quarterly changes of the nominal GDP level of the United States
+  </div>
 </div>
 
-Now we delve deeper into the details and discuss various transformation methods to remove the trend and seasonality, thereby allowing us to focus on the cyclical component, which captures the underlying economic fluctuations of interest. Figure 2 above applies the quarter-on-quarter(QoQ) first-difference transformation \( \Delta GDP_{t}=GDP_{t}-GDP_{t-1} \) to the seasonally unadjusted quarterly nominal GDP series of the United States. While, this first-difference transformation effectively removes the trend component, seasonal variations remain evident in the data. Specifically, in most years, quarterly fluctuations occur around zero, with the nominal GDP consistently lower in the first quarter, sharply increasing in the second quarter, declining in the third quarter, and slightly increasing again in the fourth quarter. Furthermore, a structural change in seasonality can be observed over time, as the typical pattern where the fourth quarter exceeds the level of the second-quarter gradually disappears.
+Now we delve deeper into the details and discuss various transformation methods to remove the trend and seasonality, thereby allowing us to focus on the cyclical component, which captures the underlying economic fluctuations of interest. **Figure 2** above applies the quarter-on-quarter(QoQ) first-difference transformation $$( \Delta GDP_{t}=GDP_{t}-GDP_{t-1} )$$ to the not seasonally adjusted quarterly nominal GDP series of the United States. While this first-difference transformation effectively removes the trend component, seasonal variations remain evident in the data. Specifically, in most years, quarterly fluctuations occur around zero, with the nominal GDP consistently lower in the first quarter, sharply increasing in the second quarter, declining in the third quarter, and slightly increasing again in the fourth quarter. Furthermore, a structural change in seasonality can be observed over time, as the typical pattern where the fourth quarter exceeds the level of the second-quarter gradually disappears.
 
+However, transformation methods such as **Figure 2** have a limitation in that it does not account for the scale effect of the variable. Specifically, the amplitude of the series appears to increase over time, which is likely attributable to the expansion of the economy, i.e. the rising level of nominal GDP of the United States. To remove this scale effect, it is common to transform the series into quarterly growth rates. In this case, the growth rate is calculated as follows:
+\begin{equation}
+    g_{gdp} = \frac{GDP_{t}-GDP_{t-1}}{GDP_{t-1}}\cdot 100 \notag
+\end{equation}
+The problem with this representation, however, is that it introduces asymmetry between positive and negative changes. For example, a positive change from 100 to 125 corresponds to a 25% increase, while a negative change from 125 to 100 amounts to a 20% decrease. As a result, when calculating the average growth rate for a highly volatile series, the average can be biased. In an extreme case, the average growth rate can be calculated in spite of a negative trend. To address this issue, the most commonly used method is to employ the *continuous growth rate*, which approximates the growth rate as follows:
+\begin{equation}
+    g_{gdp}\approx (\ln{GDP_{t}}-\ln{GDP_{t-1}})\cdot 100 \notag
+\end{equation}
+<div style="position: relative; width: 100%; max-width: 725px; margin: auto;">
+  <div style="position: relative; padding-bottom: 65%; height: 0;">
+    <iframe src="/projects/TS_Package/ex2-1/figure1d.html"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+    </iframe>
+  </div>
+  <div style="text-align: center; font-weight: bold; font-size: 16px; margin-top: -10px; margin-bottom: 20px">
+    Figure 3. Quarterly growth rate of the nominal GDP level of the United States
+  </div>
+</div>
+
+**Figure 3** depicts the quarterly growth rate of U.S. nominal GDP, calculated as the log difference between consecutive quarters. Similar to **Figure 2**, the long-term trend is removed, while seasonal fluctuations remain. However, unlike the level-differenced series in **Figure 2**, the volatility of the series does not exhibit an increasing pattern over time. Rather, the series fluctuates around zero with a relatively stable amplitude. Interestingly, the volatility appears relatively larger prior to the 1980s, gradually decreasing thereafter, and shows a temporary spike around 2020 before stabilizing in the subsequent period.
+
+### Reference
+- Gar$$\imath$$n, J., Lester, R., & Sims, E. (2018), "Intermediate macroeconomics," This Version, 3(0).
+- Kirchgässner, G., Wolters, J., & Hassler, U. (2012), "Introduction to modern time series analysis," *Springer Science & Business Media*.
 
 [[Back to Previous Page]]({{ "/projects/TS_Package_MATLAB" | relative_url }})
