@@ -19,7 +19,7 @@ However, when the goal is to compare multiple quarterly macroeconomic variables,
 
 Also, we standardize the units of measurement by expressing all GDP values in billions of dollars. Specifically, nominal GDP figures that are not seasonally adjusted and reported in millions of dollars are converted to billions by dividing them by 1,000.
 
-## Trend, Seasonality and Transformation
+## Trend, Cycles, Seasonality and Transformation
 Following Persons (1919), time series data are said to consist of three main unobservable components: the trend, cyclical and seasonal components. The trend refers to long-run development, while the cyclical component captures fluctuations lasting more than one year. The seasonal component represents recurring movements within a year. When applying time series analysis, it is useful to visualize and detect those properties by examining the graphical representation of the series.
 
 <div style="position: relative; width: 100%; max-width: 725px; margin: auto;">
