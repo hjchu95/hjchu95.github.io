@@ -217,8 +217,12 @@ From this identity, we can derive an important implication: if the price level i
 
 &emsp;Since past economies where characterized by relatively lower prices productivity, calculating real GDP using recent base-year prices tends to overestimate the level of real GDP for earlier periods. As a result, it is possible to observe a reversal in which real GDP exceeds nominal GDP prior to the base year---a phenomenon commonly seen in national statistics that apply recent base years. In this analysis, the real GDP series is calculated based on a chain-weighted method while using 2017 as the base year, which explains the observed gap between real and nominal GDP levels before and after that point.
 
+## Price Indices
+
+
 ### Reference
 - Gar$$\imath$$n, J., Lester, R., & Sims, E. (2018), "Intermediate macroeconomics," This Version, 3(0).
 - Kirchgässner, G., Wolters, J., & Hassler, U. (2012), "Introduction to modern time series analysis," *Springer Science & Business Media*.
+- Persons, W. M. (1919). "Indices of business conditions: an index of general business conditions," *Harvard University Press*.
 
 [[Back to Previous Page]]({{ "/projects/TS_Package_MATLAB" | relative_url }})
