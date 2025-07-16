@@ -171,7 +171,7 @@ From this identity, we can derive an important implication: if the price level i
   </tbody>
 </table>
 <div style="text-align: center; font-weight: bold; font-size: 16px; margin-top: 20px; margin-bottom: 20px;">
-  Table 1. Quarterly and Annual Growth Rates
+  Table 1. Quarterly and Annual Growth Rates of Nominal GDP, Real GDP and GDP Deflator
 </div>
 
 &emsp;By examining the actual US macroeconomic data, one can verify if the identity empirically holds. Specifically, the average quarter-on-quarter growth rate of the nominal GDP is 1.54%, corresponding to an annualized growth rate of 6.17%. Applying the same method to real GDP, we find that the average QoQ growth rate is significantly lower, at 0.73%, equivalent to an annualized growth rate of 2.92%. According to the identity above, the gap between nominal and real GDP growth rates (approximately 3.25 percentage points) should match the average annual growth rate of the GDP deflator. Indeed, the GDP deflator's average quarterly growth rate is 0.81%, corresponding to an annualized growth rate of 3.25%. Therefore, we can conclude that the identity holds true in actual data.
