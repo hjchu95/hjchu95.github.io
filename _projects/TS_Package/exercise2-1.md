@@ -118,22 +118,22 @@ $$\begin{equation}
 
 Defined in this way, nominal GDP changes whenever prices or quantities change. In economic analysis, our focus is maximizing utility, and utility is primarily determined by the quantity of goods and services we consume. Therefore, what ultimately matters for well-being is the quantity rather than the price level. This is why it is necessary to measure real GDP, which captures the quantity of production without being influenced by price fluctuations.
 
-&emsp;Real GDP, often referred to as **constant dollar GDP**, is defined by evaluating the total quantity of production at the prices of a specific *base year*, in order to ensure consistency across different time periods. Specifically, it multiplies the quantity of each goods and services produced each year by their corresponding prices in the chosen base year. If the base year is denoted as year $$t$$ and the economy produces $$N$$ goods and services, the real GDP for each year can be expressed as follows:
+&emsp;Real GDP, often referred to as **constant dollar GDP**, is defined by evaluating the total quantity of production at the prices of a specific *base year*, in order to ensure consistency across different time periods. Specifically, it multiplies the quantity of each goods and services produced each year by their corresponding prices in the chosen base year. If the base year is denoted as year $$b$$ and the economy produces $$N$$ goods and services, the real GDP for each year can be expressed as follows:
 
 $$\begin{aligned}
-    & Y_{t} = p_{1,t}\cdot y_{1,t} + p_{2,t}\cdot y_{2,t}+\cdots+p_{N,t}\cdot y_{N,t} \notag \\ 
-    & Y_{t+1} = p_{1,t}\cdot y_{1,t+1} + p_{2,t}\cdot y_{2,t+1} + \cdots + p_{N,t}\cdot y_{N,t+1} \notag \\
+    & Y_{b} = p_{1,b}\cdot y_{1,b} + p_{2,b}\cdot y_{2,b}+\cdots+p_{N,b}\cdot y_{N,b} \notag \\ 
+    & Y_{b+1} = p_{1,b}\cdot y_{1,b+1} + p_{2,b}\cdot y_{2,b+1} + \cdots + p_{N,b}\cdot y_{N,b+1} \notag \\
     & \hspace{20ex}\vdots \notag \\
-    & \Rightarrow Y_{t+h} = \sum_{i=1}^{N}{p_{i,t}\cdot y_{i,t+h}}\text{ for }h=0,1,2,\cdots \notag
+    & \Rightarrow Y_{b+t} = \sum_{i=1}^{N}{p_{i,b}\cdot y_{i,b+t}}\text{ for }t=0,1,2,\cdots \notag
 \end{aligned}$$
 
 &emsp;Based on nominal GDP and constant dollar GDP (real GDP), we can then define an **implicit price index** called as the **GDP deflator** as follows:
 
 $$\begin{aligned}
-    & P_{t} = \frac{NGDP_{t}}{RGDP_{t}} = \frac{p_{1,t}\cdot y_{1,t}+\cdots+p_{N,t}\cdot y_{N,t}}{p_{1,t}\cdot y_{1,t}+\cdots+p_{N,t}\cdot y_{N,t}} = 1 \notag \\
-    & P_{t+1} = \frac{NGDP_{t+1}}{RGDP_{t+1}} = \frac{p_{1,t+1}\cdot y_{1,t+1}+\cdots+p_{N,t+1}\cdot y_{N,t+1}}{p_{1,t}\cdot y_{1,t+1}+\cdots+p_{N,t}\cdot y_{N,t+1}} \notag \\
+    & P_{b} = \frac{NGDP_{b}}{RGDP_{b}} = \frac{p_{1,b}\cdot y_{1,b}+\cdots+p_{N,b}\cdot y_{N,b}}{p_{1,b}\cdot y_{1,b}+\cdots+p_{N,b}\cdot y_{N,b}} = 1 \notag \\
+    & P_{b+1} = \frac{NGDP_{b+1}}{RGDP_{b+1}} = \frac{p_{1,b+1}\cdot y_{1,b+1}+\cdots+p_{N,b+1}\cdot y_{N,b+1}}{p_{1,b}\cdot y_{1,b+1}+\cdots+p_{N,b}\cdot y_{N,b+1}} \notag \\
     & \hspace{20ex}\vdots \notag \\
-    & \Rightarrow P_{t+h} = \frac{\sum_{i=1}^{N}{p_{i,t+h}\cdot y_{i,t+h}}}{\sum_{i=1}^{N}{p_{i,t}\cdot y_{i,t+h}}}\text{ for }h=0,1,2,\cdots \notag 
+    & \Rightarrow P_{b+t} = \frac{\sum_{i=1}^{N}{p_{i,b+t}\cdot y_{i,b+t}}}{\sum_{i=1}^{N}{p_{i,b}\cdot y_{i,b+t}}}\text{ for }t=0,1,2,\cdots \notag 
 \end{aligned}$$
 
 From the definition of the GDP deflator, we can derive two important points. First, the price level is normalized to 1 in the base year. Second, we can establish the following identity that holds between nominal GDP, real GDP, and the price level:
