@@ -218,9 +218,9 @@ From this identity, we can derive an important implication: if the price level i
 &emsp;Since past economies where characterized by relatively lower prices productivity, calculating real GDP using recent base-year prices tends to overestimate the level of real GDP for earlier periods. As a result, it is possible to observe a reversal in which real GDP exceeds nominal GDP prior to the base year---a phenomenon commonly seen in national statistics that apply recent base years. In this analysis, the real GDP series is calculated based on a chain-weighted method while using 2017 as the base year, which explains the observed gap between real and nominal GDP levels before and after that point.
 
 ## Price Indices
-The **Consumer Price Index (CPI)** is another widely used macroeconomic indicator for analyzing a country's overall price level. The CPI shares a similar objective with the previously introduced GDP deflator in that both aim to measure the average price level. However, they differ fundamentally in how they are constructed. The CPI measures changes in the prices of consumed goods and services based on a *"basket"* of items. This basket is determined by the Bureau of Labor Statistics (BLS), which analyzes household consumption habits, and consists of various goods and services that the average household consumes within a given period. Specifically, it includes different quantities of different goods, such as 4 pounds of coffee or 12 gallons of gasoline.
+&emsp;The **Consumer Price Index (CPI)** is another widely used macroeconomic indicator for analyzing a country's overall price level. The CPI shares a similar objective with the previously introduced GDP deflator in that both aim to measure the average price level. However, they differ fundamentally in how they are constructed. The CPI measures changes in the prices of consumed goods and services based on a *"basket"* of items. This basket is determined by the Bureau of Labor Statistics (BLS), which analyzes household consumption habits, and consists of various goods and services that the average household consumes within a given period. Specifically, it includes different quantities of different goods, such as 4 pounds of coffee or 12 gallons of gasoline.
 
-Let there be $$N$$ goods produced in the economy, and denote $$x_{i}$$ as the fixed quantity of good $$i$$ that is consumed by an average household within a given period. Then the total cost of the basket in year $$t$$ can be derived by the sum of the products of the fixed quantity of each good and its corresponding market price in that period as follows:
+&emsp;Let there be $$N$$ goods produced in the economy, and denote $$x_{i}$$ as the fixed quantity of good $$i$$ that is consumed by an average household within a given period. Then the total cost of the basket in year $$t$$ can be derived by the sum of the products of the fixed quantity of each good and its corresponding market price in that period as follows:
 
 $$\begin{equation}
     Cost_{t} = p_{1,t}\cdot x_{1} + p_{2,t}\cdot x_{2} + \cdots + p_{N,t}\cdot x_{N}
@@ -234,12 +234,68 @@ $$\begin{aligned}
     & = \frac{\sum_{i=1}^{N}{p_{i,t}\cdot x_{i}}}{\sum_{i=1}^{N}{p_{i,b}\cdot x_{i}}} \notag
 \end{aligned}$$
 
-A key takeaway point from the definition of the CPI is that the items included in the basket and their respective quantities are fixed. Therefore, the primary purpose of the CPI is to track how the cost of purchasing this fixed set of goods and services changes over time. If the average price level increases, the CPI will be lower than on before the base year and greater than one after the base year (although in practice, CPI data is mostly normalized to 100 for the base year).
+&emsp;A key takeaway point from the definition of the CPI is that the items included in the basket and their respective quantities are fixed. Therefore, the primary purpose of the CPI is to track how the cost of purchasing this fixed set of goods and services changes over time. If the average price level increases, the CPI will be lower than on before the base year and greater than one after the base year (although in practice, CPI data is mostly normalized to 100 for the base year).
 
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <div style="text-align: center;">
+    <div style="overflow: hidden; width: 360px; height: 225px; margin: 0 auto;">
+      <iframe src="/projects/TS_Package/ex2-1/figure8a.html"
+              style="zoom: 0.5; width: 725px; height: 475px; border: none;">
+      </iframe>
+    </div>
+    <div style="font-size: 14px; font-weight: bold; margin-top: 0px;">Figure 8-(a) Logarithm of Price Levels</div>
+  </div>
+  <div style="text-align: center;">
+    <div style="overflow: hidden; width: 360px; height: 225px; margin: 0 auto;">
+      <iframe src="/projects/TS_Package/ex2-1/figure8b.html"
+              style="zoom: 0.5; width: 725px; height: 475px; border: none;">
+      </iframe>
+    </div>
+    <div style="font-size: 14px; font-weight: bold; margin-top: 0px;">Figure 8-(b) Inflation Rate</div>
+  </div>
+</div>
+<div style="text-align: center; font-weight: bold; font-size: 16px; margin-top: 20px; margin-bottom: 30px">
+  Figure 8. Price Level and Inflation Regarding the GDP Deflator and CPI of the United States
+</div>
 
+<table style="width: 50%; margin: auto; border-collapse: collapse;">
+  <thead>
+    <tr>
+      <th style="text-align: center">Variable</th>
+      <th style="text-align: center;">Quarterly</th>
+      <th style="text-align: center;">Annual</th>
+      <th style="text-align: center;">Standard Deviation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center;">GDPDEF</td>
+      <td style="text-align: center;">0.81</td>
+      <td style="text-align: center;">3.25</td>
+      <td style="text-align: center;">0.58</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">CPI</td>
+      <td style="text-align: center;">0.92</td>
+      <td style="text-align: center;">3.67</td>
+      <td style="text-align: center;">0.75</td>
+    </tr>
+  </tbody>
+</table>
+<div style="text-align: center; font-weight: bold; font-size: 16px; margin-top: 20px; margin-bottom: 20px;">
+  Table 2. Growth Rates and Volatility of the GDP Deflator and CPI
+</div>
+
+&emsp;**Figure 8-(a)** shows how the log values of the GDP deflator and CPI fluctuates over time. It is clearly evident that the CPI level is consistently higher than that of the GDP deflator. **Figure 8-(b)** compares the quarter-on-quarter growth rates of each price index, namely the inflation rates. A key observation is that the inflation rate based on the CPI tends to be higher on average and exhibits greater volatility than that based on the GDP deflator. For example, during recession periods such as the 2008 financial crisis, the CPI inflation rate drops sharply into negative, while the GDP deflator declines only to around zero.
+
+&emsp;Specifically, **Table 2** presents the quarterly and annual inflation rates and their standard deviations (as a measure of volatility) for each price index over the entire sample period. The average quarter-on-quarter inflation rate of the GDP deflator is 0.81%, which corresponds to an annualized inflation rate of 3.25%. By contrast, the CPI shows a slightly higher average QoQ inflation rate of 0.92%, equivalent to 3.67% on an annual basis. The standard deviation of CPI inflation is also higher, at 0.75, compared to 0.58 for the GDP deflator.
+
+&emsp;Such differences between the two price indices can be explained by the following two main reasons, which arise from differences in their construction and measurement purposes. First, the GDP deflator is derived based on the goods and services actually produced within a country, while the CPI is based on the goods and services consumed domestically. Consequently, the CPI not only excludes goods and services that are produced but not consumed domestically, but also includes goods produced abroad. In other words, if a certain good is produced in large quantities within the country but consumed in smaller amounts, it has a greater impact on the GDP deflator than on the CPI. For this reason, the GDP deflator is generally preferred when assessing overall price inflation for domestically produced goods and services, while the CPI is more appropriate for capturing changes in the cost of living, i.e. nominal consumption expenditures, for the average household.
+
+&emsp;Second, the two indices also differ in how they handle prices and quantities. The CPI keeps the quantities fixed at the base year level and tracks changes in prices over time, while the GDP deflator uses base year prices and reflects changes in quantities over time. As a result, the CPI tends to report higher price levels than the GDP deflator, mainly because it fixes quantities. As we learn in microeconomics, when relative prices change, consumers tend to substitute away from relatively more expensive goods toward cheaper alternatives, a behavior known as the **substitution effect**. However, because the CPI fixes quantities in its basket, it does not account for this substitution behavior. Therefore, in real-world situations where relative prices fluctuate over time, the CPI tends to overstate price changes, resulting in what is known as **substitution bias**.
 
 ### Reference
-- Gar$$\imath$$n, J., Lester, R., & Sims, E. (2018), "Intermediate macroeconomics," This Version, 3(0).
+- Gar$$\imath$$n, J., Lester, R., & Sims, E. (2018), "Intermediate macroeconomics".
 - Kirchgässner, G., Wolters, J., & Hassler, U. (2012), "Introduction to modern time series analysis," *Springer Science & Business Media*.
 - Persons, W. M. (1919). "Indices of business conditions: an index of general business conditions," *Harvard University Press*.
 
