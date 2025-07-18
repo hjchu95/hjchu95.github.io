@@ -294,6 +294,9 @@ $$\begin{aligned}
 
 &emsp;Second, the two indices also differ in how they handle prices and quantities. The CPI keeps the quantities fixed at the base year level and tracks changes in prices over time, while the GDP deflator uses base year prices and reflects changes in quantities over time. As a result, the CPI tends to report higher price levels than the GDP deflator, mainly because it fixes quantities. As we learn in microeconomics, when relative prices change, consumers tend to substitute away from relatively more expensive goods toward cheaper alternatives, a behavior known as the **substitution effect**. However, because the CPI fixes quantities in its basket, it does not account for this substitution behavior. Therefore, in real-world situations where relative prices fluctuate over time, the CPI tends to overstate price changes, resulting in what is known as **substitution bias**.
 
+## Labor Market Indicators and Okun's Law
+
+
 ### Reference
 - Gar$$\imath$$n, J., Lester, R., & Sims, E. (2018), "Intermediate macroeconomics".
 - Kirchgässner, G., Wolters, J., & Hassler, U. (2012), "Introduction to modern time series analysis," *Springer Science & Business Media*.
