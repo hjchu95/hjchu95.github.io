@@ -218,6 +218,24 @@ From this identity, we can derive an important implication: if the price level i
 &emsp;Since past economies where characterized by relatively lower prices productivity, calculating real GDP using recent base-year prices tends to overestimate the level of real GDP for earlier periods. As a result, it is possible to observe a reversal in which real GDP exceeds nominal GDP prior to the base year---a phenomenon commonly seen in national statistics that apply recent base years. In this analysis, the real GDP series is calculated based on a chain-weighted method while using 2017 as the base year, which explains the observed gap between real and nominal GDP levels before and after that point.
 
 ## Price Indices
+The **Consumer Price Index (CPI)** is another widely used macroeconomic indicator for analyzing a country's overall price level. The CPI shares a similar objective with the previously introduced GDP deflator in that both aim to measure the average price level. However, they differ fundamentally in how they are constructed. The CPI measures changes in the prices of consumed goods and services based on a *"basket"* of items. This basket is determined by the Bureau of Labor Statistics (BLS), which analyzes household consumption habits, and consists of various goods and services that the average household consumes within a given period. Specifically, it includes different quantities of different goods, such as 4 pounds of coffee or 12 gallons of gasoline.
+
+Let there be $$N$$ goods produced in the economy, and denote $$x_{i}$$ as the fixed quantity of good $$i$$ that is consumed by an average household within a given period. Then the total cost of the basket in year $$t$$ can be derived by the sum of the products of the fixed quantity of each good and its corresponding market price in that period as follows:
+
+$$\begin{equation}
+    Cost_{t} = p_{1,t}\cdot x_{1} + p_{2,t}\cdot x_{2} + \cdots + p_{N,t}\cdot x_{N}
+\end{equation}$$
+
+Then the CPI in year $$t$$ is defined as the ratio of the cost of the basket in that year relative to the cost of the basket in some arbitrary base year as follows:
+
+$$\begin{aligned}
+    P_{t}^{cpi} & = \frac{Cost_{t}}{Cost_{b}} \notag \\
+    & = \frac{p_{1,t}\cdot x_{1} + p_{2,t}\cdot x_{2} + \cdots + p_{N,t}\cdot x_{N}}{p_{1,b}\cdot x_{1} + p_{2,t}\cdot x_{2} + \cdots + p_{N,b}\cdot x_{N}} \notag \\
+    & = \frac{\sum_{i=1}^{N}{p_{i,t}\cdot x_{i}}}{\sum_{i=1}^{N}{p_{i,b}\cdot x_{i}}} \notag
+\end{aligned}$$
+
+A key takeaway point from the definition of the CPI is that the items included in the basket and their respective quantities are fixed. Therefore, the primary purpose of the CPI is to track how the cost of purchasing this fixed set of goods and services changes over time. If the average price level increases, the CPI will be lower than on before the base year and greater than one after the base year (although in practice, CPI data is mostly normalized to 100 for the base year).
+
 
 
 ### Reference
