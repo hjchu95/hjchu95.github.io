@@ -16,6 +16,6 @@ The usage of the functions in the package and the interpretation of their output
 - [Exercise 1]({{ "/projects/TS_Package_MATLAB/exercise1/" | relative_url }}): Downloading data from ECOS and FRED using Open API
 - [Exercise 2-1]({{ "/projects/TS_Package_MATLAB/exercise2-1/" | relative_url }}): Plotting Macroeconomic data of the US
     - [Exercise 2-2]({{ "/projects/TS_Package_MATLAB/exercise2-2" | relative_url }}): Plotting Macroeconomic data of South Korea
-
+- [Exercise 3]({{ "/projects/TS_Package_MATLAB/exercise3/" | relative_url }}): Autocoveriance Functions (ACF) and Autoregressive Moving Average Models (ARMA)
 
 [[Back to Previous Page]]({{ "/projects" | relative_url }})
