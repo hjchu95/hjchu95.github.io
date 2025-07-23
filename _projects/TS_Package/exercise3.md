@@ -34,7 +34,7 @@ In time series analysis, observations are typically dependent across time, viola
 Mostly in economics, we mainly focus up to the second moment including the cross moment. Specifically, in time series, the covariance of the random variable's own history is called **autocovariance** which is formally defined as follows:
 
 > **Definition 2. Autocovariance Function (ACF)**  
-> If $$\{X_{t}:t\in\mathbb{Z}\}$$ is a process such that $$Var(X_{t})<\infty$$ for each $$t\in\mathbb{Z}$$, then the **autocovariance function** $$R_{X}(r,s)$ of $\{X_{t}\}$$ is defined as
+> If $$\{X_{t}:t\in\mathbb{Z}\}$$ is a process such that $$Var(X_{t})<\infty$$ for each $$t\in\mathbb{Z}$$, then the **autocovariance function** $$R_{X}(r,s)$$ of $$\{X_{t}\}$$ is defined as
 > 
 > $$\begin{equation}
 >     R_{X}(r,s) = Cov(X_{r},X_{s})\text{ where }r\text{, }s\in\mathbb{Z}
