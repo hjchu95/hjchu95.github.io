@@ -30,9 +30,120 @@ In time series analysis, observations are typically dependent across time, viola
 >
 > In words, a white noise process is simply a process with no time dependence, i.e. we do not care about the distribution but only care about the correlation (or covariance). Therefore, a process that is not i.i.d but has the same autocovariance as the i.i.d process is called the white noise process.
 
-## Estimation of the Autocovariance Function
+## Estimation of the Autocovariance and Autocorrelation Function
+Mostly in economics, we mainly focus up to the second moment including the cross moment. Specifically, in time series, the covariance of the random variable's own history is called **autocovariance** which is formally defined as follows:
 
+> **Definition 2. Autocovariance Function (ACF)**  
+> If $$\{X_{t}:t\in\mathbb{Z}\}$$ is a process such that $$Var(X_{t})<\infty$$ for each $$t\in\mathbb{Z}$$, then the **autocovariance function** $$R_{X}(r,s)$ of $\{X_{t}\}$$ is defined as
+> 
+> $$\begin{equation}
+>     R_{X}(r,s) = Cov(X_{r},X_{s})\text{ where }r\text{, }s\in\mathbb{Z}
+> \end{equation}$$
+>
+> In other words, the autocovariance function implies the covariance of two members (observations) in a process.
+
+Note that if one chooses another pair of members, say $$(r^{\prime},s^{\prime})$$, then the autocovariance will differ from that of $$(r,s)$$. Also, the restriction that $$Var(X_{t})<\infty$$ implies that the random variables for which the autocovariance function is defined must have finite second moments. This is because one cannot compare the autocovariance if random variables have infinite second moments, which is not the interest of time series.[^1]
+
+Recall that the limit of covariance is that we cannot know the magnitude of the direction since it depends on the unit of measurement. As autocovariance suffers from a similar limitation, the definition of *autocorrelation*, which is a normalization of the autocovariance function, is introduced.
+
+> **Definition 3. Autocorrelation Function**  
+> The **autocorrelation function** of a random variable $$X$$ is defined as
+>
+> $$\begin{equation}
+>   \rho_{X}(h) = \frac{R_{X}(h)}{R_{X}(0)}
+> \end{equation}$$
+>
+> where $$R_{X}(0)$$ implies the variance of that variable.
+
+Since one important assumption was that the error term (or shock process) is a *white noise process*, it is sometimes useful to estimate the autocovariance or autocorrelation function of a stochastic process and check whether it is a white noise process. Once data is given, it turns out that as the cross-sectional data case, we use sample moments as estimators. Two most popular estimators of the autocovariance function is as follows.
+
+$$\begin{gather}
+    \hat{R}(\tau) = \frac{1}{T}\sum_{t=1}^{T-|\tau|}{(X_{t}-\bar{X})(X_{t+|\tau|}-\bar{X})} \label{eq1} \tag{1} \\
+    \hat{R}^{*}(\tau) = \frac{1}{T-|\tau|}\sum_{t=1}^{T-|\tau|}{(X_{t}-\bar{X})(X_{t+|\tau|}-\bar{X})} \label{eq2} \tag{2}
+\end{gather}$$
+
+Note that although (\ref{eq1}) and (\ref{eq2}) are both biased since $$\bar{X}$$, which is the sample mean, can be biased under a small sample size. Moreover, the bias will be bigger for (\ref{eq1}) although the bias is asymptotically negligible for both of them because if $$\tau$$ is small, $$1/(T-\tau)\approx 1/T$$ holds.
+
+Using the estimators above, the estimator for the autocorrelation function is given as
+
+$$\begin{equation}\label{eq3}
+    \hat{\rho}(\tau) = \frac{\hat{R}(\tau)}{\hat{R}(0)} \tag{3}
+\end{equation}$$
+
+By collecting these autocorrelation functions for $$\tau=1,\cdots,h$$ periods, one finally obtains the autocorrelation function estimator for $$h$$ periods as follows:
+
+$$\begin{equation}\label{eq4}
+    \rho_{h} = \begin{pmatrix}
+        \rho(1) \\
+        \vdots \\
+        \rho(h)
+    \end{pmatrix} \tag{4}
+\end{equation}$$
+
+## White Noise Tests
+### Simple White Noise Tests
+Using the fact that a white noise process has $$\rho_{h}=0$$, i.e. no autocorrelation, one can derive the test statistic of the sample ACF and check whether a process is white noise. Since $$\rho_{h}=0$$, the asymptotic distribution of the sample ACF is as follows.
+
+$$\begin{align*}
+    & \sqrt{T}\cdot(\hat{\rho}_{h} - \rho_{h})\to^{d}\mathcal{N}(0,I_{h}) \\
+    & \Rightarrow \hat{\rho}_{h} \to^{d}\mathcal{N}(0,\frac{1}{T}\cdot I_{h})
+\end{align*}$$
+
+Then the null and alternative hypothesis will be as follows.
+
+$$\begin{align*}
+    & H_{0}\text{: }\rho_{h}=0\text{; the process is white noise} \\
+    & H_{1}\text{: }\rho_{h}\neq 0\text{; the process is not a white noise}
+\end{align*}$$
+
+Moreover, referring to Box et. al. (2015), the asymptotic standard error of the sample ACF is as follows.
+
+$$\begin{equation}\label{eq5}
+    se(\hat{\rho}_{h}) = \frac{1}{\sqrt{T}} \tag{5}
+\end{equation}$$
+
+Therefore, the confidence interval for the sample autocorrelation function is given by the two standard error bounds as follows:
+
+$$\begin{equation}
+    [-2\cdot\frac{1}{\sqrt{T}},+2\cdot\frac{1}{\sqrt{T}}] \tag{6}
+\end{equation}$$
+
+The simple white noise test, which checks whether the sample autocorrelation function falls within the two standard error bounds, is implemented in the following function that estimates the sample autocorrelation function.
+
+> <p style="font-size:25px"><code>corr, bound = autocor(X, taumax=None,is_plot=None)</code></p>
+><p style="font-size:15px">Estimating the Autocorrelation function (ACF) of a univariate process and testing a single hypothesis for a White-noise test.</p>  
+> - **Inputs**:  
+>   `X`: Objective of estimation (univariate)  
+>   `taumax`: Maximum time lag (default = 20)  
+>   `is_plot`: Option to control for the figure  
+>    - 0 = omit figure  
+>    - 1 = plot figure  
+> - **Outputs**:  
+>   `corr`: Estimated autocorrelation function, $$(\text{taumax}+1) \times 1$$  
+>   `bound`: 2 standard error limits, Box et. al. (2015) pp. 33.
+
+---
+
+The `autocov` function, which is used within the `autocor` function above, is defined follows:
+
+> <p style="font-size:25px"><code>cov = autocov(X, taumax=None)</code></p>
+><p style="font-size:15px">Estimating the Autocovariance function (ACF) of a univariate process</p>  
+> - **Inputs**:  
+>   `X`: Objective of estimation (univariate)  
+>   `taumax`: Maximum time lag (default = 20)  
+> - **Outputs**:  
+>   `cov`: Estimated autocovariance function, $$(\text{taumax}+1) \times 1$$  
+
+### Example
+
+
+### Joint White Noise Tests (Box-Pierce and Ljung-Box Test)
 
 ## Autoregressive Moving Average Process
+
+### Reference
+- Box, G. E., Jenkins, G. M., Reinsel, G. C., & Ljung, G. M. (2015). "Time series analysis: forecasting and control". *John Wiley & Sons*.
+
+[^1]: Indeed the definition of $$\infty$$ is that no matter what number you pick, it is strictly greater than that number, i.e. not comparable.
 
 [[Back to Previous Page]]({{ "/projects/TS_Package_MATLAB" | relative_url }})
