@@ -135,7 +135,28 @@ The `autocov` function, which is used within the `autocor` function above, is de
 >   `cov`: Estimated autocovariance function, $$(\text{taumax}+1) \times 1$$  
 
 ### Example
+<div style="position: relative; width: 100%; max-width: 725px; margin: auto;">
+  <div style="position: relative; padding-bottom: 65%; height: 0;">
+    <iframe src="/projects/TS_Package/ex3/figure1.html"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+    </iframe>
+  </div>
+  <div style="text-align: center; font-weight: bold; font-size: 16px; margin-top: -20px; margin-bottom: 20px">
+    Figure 1. Sample Autocorrelation Function of the CPI Inflation Rate of the United States
+  </div>
+</div>
 
+Using the CPI inflation rate of the United States where $$T=260$$ (from 1960 Q2 to 2025 Q1), one can obtain **Figure 1** above. Note that the red dots in the stem plot is the ACF from 0 to 20, i.e. the default lag is 20 periods. One can observe that $$\hat{\rho}(0)$$ is one, which is in line with the definition of the sample autocorrelation function. The blue line is the confidence interval of the sample autocorrelation function under a 2 standard error limit. Using equation (\ref{eq5}) for the standard error, critical value as 2, and the confidence interval equation, the estimated confidence interval is as follows:
+
+$$\begin{align}
+    & [-c.v\cdot se(\hat{\rho}_{h}),+c.v\cdot se(\hat{\rho}_{h})] \\
+    & \Rightarrow [-2\cdot\frac{1}{\sqrt{T}},+2\cdot\frac{1}{\sqrt{T}}] \\
+    & \Rightarrow [-0.1240,+0.1240]
+\end{align}$$
+
+Interpreting the result of **Figure 1** above, one can say that the null hypothesis is rejected such that the CPI inflation rate of the United States is not a white noise process since all the ACFs are outside the confidence interval bound.
+
+Then can one conclude that the process is a white noise if all ACFs are included 
 
 ### Joint White Noise Tests (Box-Pierce and Ljung-Box Test)
 
