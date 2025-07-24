@@ -179,35 +179,91 @@ $$\begin{align}
     H_{1}\text{: }\rho(s)\neq 0\text{ for some }1\leq s\leq h
 \end{align}$$
 
-Again, CLT leads to
+Then, the central limit theorem (CLT) leads to
 
-$$\begin{equation}
-    \sqrt{T}\cdot(\hat{\rho}_{h} - \rho_{h})\to^{d}\mathcal{N}(0,I_{h})
+$$\begin{equation}\label{eq7}
+    \sqrt{T}\cdot(\hat{\rho}_{h} - \rho_{h})\to^{d}\mathcal{N}(0,I_{h}) \tag{7}
 \end{equation}$$
 
-Then the test statistic of the joint hypothesis test is
+Based on equation (\ref{eq7}) above, the test statistic for the joint hypothesis under the null hypothesis is given by
 
 $$\begin{align}
     (\sqrt{T}\hat{\rho}_{h})^{\prime}(\sqrt{T}\hat{\rho}_{h}) & = T\cdot(\hat{\rho}_{x}(1)^{2} + \cdots + \hat{\rho}_{x}(h)^{2}) \\
     & \to^{d} \chi_{h}^{2}
 \end{align}$$
 
-Note that this is also called as the **Box-Pierce statistic** which can be formally expressed as
-
-$$\begin{equation}\label{eq7}
-    Q = T\cdot\sum_{\tau=1}^{h}\hat{\rho}^{2}(\tau)
-\end{equation}$$
-
-where $$T$$ acts as the penalty term due to the number of information. However, as suggested by \cite{Davies1979}, some simulation studies have shown a poor performance of the Box-Pierce statistic. Therefore, an alternative is the **Ljung-Box statistic** which is as
+since the sum of squared asymptotically standard normal random variables converges in distribution to a chi-squared distribution. Note that this is also called as the **Box-Pierce statistic**, which can be formally expressed as
 
 $$\begin{equation}\label{eq8}
-    Q = T\cdot(T+2)\cdot\sum_{\tau=1}^{h}{(T-\tau)^{-1}\cdot\hat{\rho}^{2}(\tau)}
+    Q = T\cdot\sum_{\tau=1}^{h}\hat{\rho}^{2}(\tau) \tag{8}
 \end{equation}$$
+
+where $$T$$ acts as the penalty term due to the number of information. However, as suggested by Davies (1979), some simulation studies have shown a poor performance of the Box-Pierce statistic. Therefore, an alternative is the **Ljung-Box statistic** which is as
+
+$$\begin{equation}\label{eq9}
+    Q = T\cdot(T+2)\cdot\sum_{\tau=1}^{h}{(T-\tau)^{-1}\cdot\hat{\rho}^{2}(\tau)} \tag{9}
+\end{equation}$$
+
+### Example
+<table style="width: 50%; margin: auto; border-collapse: collapse;">
+  <thead>
+    <tr>
+      <th style="text-align: center"></th>
+      <th style="text-align: center;">Box-Pierce Test</th>
+      <th style="text-align: center;">Ljung-Box Test</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center;">Test Statistic</td>
+      <td style="text-align: center;">914.91</td>
+      <td style="text-align: center;">947.39</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">p-value</td>
+      <td style="text-align: center;">0.00</td>
+      <td style="text-align: center;">0.00</td>
+    </tr>
+  </tbody>
+</table>
+<div style="text-align: center; font-weight: bold; font-size: 16px; margin-top: 20px; margin-bottom: 20px;">
+  Table 1. Test Statistics of the BP and LB Q-test for the CPI Inflation Rate of the United States
+</div>
+
+Again, one can check whether the stochastic process is a white noise process using the Box-Pierce (BP) or Ljung-Box (LB) Q-test. For the CPI inflation rate of the United States, where $$T=260$$, the test statistics are reported in **Table 1** above. One can see that both the BP and LB Q-test reject the null hypothesis even at the conservative 1% significance level. This implies that the CPI inflation rate is not a white noise process.
+
+<table style="width: 50%; margin: auto; border-collapse: collapse;">
+  <thead>
+    <tr>
+      <th style="text-align: center"></th>
+      <th style="text-align: center;">Box-Pierce Test</th>
+      <th style="text-align: center;">Ljung-Box Test</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center;">Test Statistic</td>
+      <td style="text-align: center;">7.3017</td>
+      <td style="text-align: center;">7.5961</td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">p-value</td>
+      <td style="text-align: center;">0.9956</td>
+      <td style="text-align: center;">0.9942</td>
+    </tr>
+  </tbody>
+</table>
+<div style="text-align: center; font-weight: bold; font-size: 16px; margin-top: 20px; margin-bottom: 20px;">
+  Table 2. Test Statistics of the BP and LB Q-test for the Real GDP Growth Rate of the United States
+</div>
+
+On the other hand, the test statistics obtained from the BP and LB Q-tests for the real GDP growth rate of the United States are shown in **Table 2**. Now, both the BP and LB tests fail to reject the null hypothesis, even at the lenient 10% significance level. Thus, this can be interpreted as evidence that the real GDP growth rate of the United States behaves like a white noise process.
 
 ## Autoregressive Moving Average Process
 
 ### Reference
 - Box, G. E., Jenkins, G. M., Reinsel, G. C., & Ljung, G. M. (2015). "Time series analysis: forecasting and control". *John Wiley & Sons*.
+- Davies, N. and Newbold, P. (1979). "Some power studies of a portmanteau test of time series model specification". *Biometrika*, 66(1), pp. 153–155.
 
 [^1]: Indeed the definition of $$\infty$$ is that no matter what number you pick, it is strictly greater than that number, i.e. not comparable.
 
