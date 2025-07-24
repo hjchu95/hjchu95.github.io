@@ -156,9 +156,53 @@ $$\begin{align}
 
 Interpreting the result of **Figure 1** above, one can say that the null hypothesis is rejected such that the CPI inflation rate of the United States is not a white noise process since all the ACFs are outside the confidence interval bound.
 
-Then can one conclude that the process is a white noise if all ACFs are included 
+<div style="position: relative; width: 100%; max-width: 725px; margin: auto;">
+  <div style="position: relative; padding-bottom: 65%; height: 0;">
+    <iframe src="/projects/TS_Package/ex3/figure2.html"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+    </iframe>
+  </div>
+  <div style="text-align: center; font-weight: bold; font-size: 16px; margin-top: -20px; margin-bottom: 20px">
+    Figure 2. Sample Autocorrelation Function of the Real GDP Growth Rate of the United States
+  </div>
+</div>
+
+Can one then conclude that a process is white noise if all the sample autocorrelations (ACFs) fall within the confidence bounds? For example, consider **Figure 2**, which shows the estimated ACF and the corresponding confidence bounds for the real GDP growth rate of the United States. One can observe that all ACFs from lag 1 to lag 20 fall within the confidence bounds. Should we then conclude that the US real GDP growth rate follows a white noise process? 
+
+In fact, this is not necessarily true. This is because the confidence bounds are derived from a single hypothesis test conducted at each individual lag. Even under the 2 standard error interval (equivalent to a 5 percent significance level), applying the test repeatedly across multiple lags does not imply that the null hypothesis for the entire process holds. This is due to the fact that each individual tests carries the risk of a Type 1 error (false rejection). Therefore, an alternative approach is to conduct a joint hypothesis test as follows.
 
 ### Joint White Noise Tests (Box-Pierce and Ljung-Box Test)
+When conducting a joint hypothesis test to check whether the process is a white noise process, the null and alternative hypothesis is as follows.
+
+$$\begin{align}
+    H_{0}\text{: }\rho(1)=\rho(2)=\cdots=\rho(h) = 0 \\
+    H_{1}\text{: }\rho(s)\neq 0\text{ for some }1\leq s\leq h
+\end{align}$$
+
+Again, CLT leads to
+
+$$\begin{equation}
+    \sqrt{T}\cdot(\hat{\rho}_{h} - \rho_{h})\to^{d}\mathcal{N}(0,I_{h})
+\end{equation}$$
+
+Then the test statistic of the joint hypothesis test is
+
+$$\begin{align}
+    (\sqrt{T}\hat{\rho}_{h})^{\prime}(\sqrt{T}\hat{\rho}_{h}) & = T\cdot(\hat{\rho}_{x}(1)^{2} + \cdots + \hat{\rho}_{x}(h)^{2}) \\
+    & \to^{d} \chi_{h}^{2}
+\end{align}$$
+
+Note that this is also called as the **Box-Pierce statistic** which can be formally expressed as
+
+$$\begin{equation}\label{eq7}
+    Q = T\cdot\sum_{\tau=1}^{h}\hat{\rho}^{2}(\tau)
+\end{equation}$$
+
+where $$T$$ acts as the penalty term due to the number of information. However, as suggested by \cite{Davies1979}, some simulation studies have shown a poor performance of the Box-Pierce statistic. Therefore, an alternative is the **Ljung-Box statistic** which is as
+
+$$\begin{equation}\label{eq8}
+    Q = T\cdot(T+2)\cdot\sum_{\tau=1}^{h}{(T-\tau)^{-1}\cdot\hat{\rho}^{2}(\tau)}
+\end{equation}$$
 
 ## Autoregressive Moving Average Process
 
