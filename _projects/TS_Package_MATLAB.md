@@ -4,7 +4,7 @@ title: "Time Series Package (MATLAB)"
 author_profile: true
 collection: projects
 permalink: /projects/TS_Package_MATLAB/
-date: 2025-07-11
+date: 2025-07-29
 ---
 
 **[Link to Package]:** <a href="https://github.com/hjchu95/Time_Series_Package" target="_blank">Time Series Package (MATLAB)</a>  
