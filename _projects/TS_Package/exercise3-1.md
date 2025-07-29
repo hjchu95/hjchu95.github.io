@@ -6,7 +6,7 @@ permalink: /projects/TS_Package_MATLAB/exercise3-1/
 collection: projects
 ---
 <br>
-**[Link to Code]:** <a href="https://github.com/hjchu95/Time_Series_Package/blob/main/Exercises/ex3_1_ACF_AR.m" target="_blank">ex3_1_ACF.m</a>
+**[Link to Code]:** <a href="https://github.com/hjchu95/Time_Series_Package/blob/main/Exercises/ex3_1_ACF.m" target="_blank">ex3_1_ACF.m</a>
 
 ## White Noise Process
 In time series analysis, observations are typically dependent across time, violating the usual assumption in linear regression models that the error terms are independently and identically distributed (i.i.d). To address this issue, time series models commonly assume that the error terms follow a **white noise process**, which is slightly more lenient assumption than i.i.d. The formal definition of a white noise process is as follows:
