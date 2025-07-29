@@ -1,13 +1,12 @@
 ---
 layout: single
-title: "Exercise 3. Autocovariance Functions (ACF) and Autoregressive Moving Average (ARMA) Models"
+title: "Exercise 3-1. Autocovariance Functions (ACF) and White Noise Test"
 author_profile: true
-permalink: /projects/TS_Package_MATLAB/exercise3/
+permalink: /projects/TS_Package_MATLAB/exercise3-1/
 collection: projects
 ---
 <br>
-**[Link to Code]:** <a href="https://github.com/hjchu95/Time_Series_Package/blob/main/Exercises/ex2_ACF_AR.m" target="_blank">ex2_ACF_AR.m</a>  
-**[Link to Lecture Note]:** <a href="https://github.com/hjchu95/Time_Series_Package/blob/main/Exercises/ex1_1_PlotData_US.m" target="_blank">3. ACF and ARMA.pdf</a>  
+**[Link to Code]:** <a href="https://github.com/hjchu95/Time_Series_Package/blob/main/Exercises/ex3_1_ACF_AR.m" target="_blank">ex3_1_ACF.m</a>
 
 ## White Noise Process
 In time series analysis, observations are typically dependent across time, violating the usual assumption in linear regression models that the error terms are independently and identically distributed (i.i.d). To address this issue, time series models commonly assume that the error terms follow a **white noise process**, which is slightly more lenient assumption than i.i.d. The formal definition of a white noise process is as follows:
@@ -258,8 +257,6 @@ Again, one can check whether the stochastic process is a white noise process usi
 </div>
 
 On the other hand, the test statistics obtained from the BP and LB Q-tests for the real GDP growth rate of the United States are shown in **Table 2**. Now, both the BP and LB tests fail to reject the null hypothesis, even at the lenient 10% significance level. Thus, this can be interpreted as evidence that the real GDP growth rate of the United States behaves like a white noise process.
-
-## Autoregressive Moving Average Process
 
 ### Reference
 - Box, G. E., Jenkins, G. M., Reinsel, G. C., & Ljung, G. M. (2015). "Time series analysis: forecasting and control". *John Wiley & Sons*.

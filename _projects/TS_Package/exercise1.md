@@ -6,7 +6,7 @@ permalink: /projects/TS_Package_MATLAB/exercise1/
 collection: projects
 ---
 <br>
-**[Link to Code]:** <a href="https://github.com/hjchu95/Time_Series_Package/blob/main/Exercises/ex0_openAPI.m" target="_blank">ex0_openAPI.m</a>
+**[Link to Code]:** <a href="https://github.com/hjchu95/Time_Series_Package/blob/main/Exercises/ex1_openAPI.m" target="_blank">ex1_openAPI.m</a>
 
 This exercise will show how to download macroeconomic data for South Korea and the United States using Open API, which will be used throughout this time series package. These data can be obtained from the Economic Statistics System (ECOS) of the Bank of Korea (BOK) and the Federal Reserve Economic Data (FRED) provided by the Federal Reserve Bank of St. Louis.
 
