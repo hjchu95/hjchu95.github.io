@@ -8,8 +8,7 @@ redirect_from:
 ---
 
 **Current Position**  
-Ph.D. Student, Economics, University of Notre Dame  
-Research Analyst, National Assembly Budget Office (NABO)
+Ph.D. Student, Economics, University of Notre Dame
 
 **Research Interests**  
 Econometrics, Macroeconomics, International Finance, Machine Learning, Monetary Policy
