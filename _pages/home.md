@@ -1,6 +1,7 @@
 ---
 permalink: /
 title: ""
+seo_title: "Hyun Jae Stephen Chu"
 author_profile: true
 redirect_from: 
   - /about/
