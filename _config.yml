@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Hyun Jae Stephen Chu"
+title                    : "Home"
 title_separator          : "-"
 name                     : &name "Hyun Jae Stephen Chu"
 description              : &description "Economics Ph.D. Student at University of Notre Dame"
