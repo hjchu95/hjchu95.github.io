@@ -4,6 +4,11 @@
 
 {% include seo.html %}
 
+{% if page.url == "/" %}
+  <title>Hyun Jae Stephen Chu</title>
+  <meta property="og:title" content="Hyun Jae Stephen Chu">
+{% endif %}
+
 <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 
 <!-- http://t.co/dKP3o1e -->
