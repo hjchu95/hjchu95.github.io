@@ -28,7 +28,7 @@ author:
   pronouns         : # example: "she/her"  
   bio              : "Economics Ph.D. Student @ ND"
   location         : "South Bend, IN"
-  employer         : # "<a href='https://economics.nd.edu/'>University of Notre Dame</a>"
+  employer         : "<a href='https://economics.nd.edu/'>University of Notre Dame</a>"
   # employer         : "[National Assembly Budget Office of Korea (NABO)](https://korea.nabo.go.kr/naboEng/main/main.do)"
   uri              : # URL
   email            : "hchu@nd.edu" 
