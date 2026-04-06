@@ -26,7 +26,7 @@ redirect_from:
 
     <ul>
       <li>
-        <a href="{{ base_path }}/files/WP/TimeVaryingBVS-WorkingPaper.pdf">[WP]</a>
+        <a href="{{ base_path }}/files/WP/TimeVaryingBVS-WorkingPaper.pdf">[WP version]</a>
         <a href="#">[Code]</a>
       </li>
     </ul>
