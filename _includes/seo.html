@@ -6,8 +6,12 @@
 {% endif %}
 {% assign seo_url = seo_url | default: site.github.url %}
 
-{% if page.title %}
+<!-- {% if page.title %}
   {% assign seo_title = page.title | append: " " | append: site.title_separator | append: " " | append: site.title %}
+{% endif %} -->
+{% assign site_name = "Hyun Jae Stephen Chu" %}
+{% if page.title %}
+  {% assign seo_title = page.title | append: " " | append: site.title_separator | append: " " | append: site_name %}
 {% endif %}
 
 {% if seo_title %}
