@@ -14,5 +14,5 @@ Before beginning my Ph.D. at Notre Dame, I worked as a research analyst in the P
 **Research Interests**  
 Bayesian Econometrics, Macroeconomics, International Economics, Machine Learning, Monetary and Fiscal Policy
 
-**Email** <a href="hchu@nd.edu" target="_blank">hchu@nd.edu</a>  
+**Email** <a href="mailto:hchu@nd.edu" target="_blank">hchu@nd.edu</a>  
 **Curriculum Vitae** <a href="http://hjchu95.github.io/files/CV/CV.pdf" target="_blank">[PDF]</a>
