@@ -1,3 +1,14 @@
 <script src="{{ base_path }}/assets/js/main.min.js"></script>
 
 {% include analytics.html %}
+
+<script>
+function toggleAbstract(id) {
+  var x = document.getElementById(id);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
