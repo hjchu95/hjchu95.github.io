@@ -22,7 +22,7 @@ redirect_from:
 <ul>
   <li>
     <strong><a href="{{ base_path }}/files/WP/TimeVaryingBVS-WorkingPaper.pdf" target="_blank">"Time-varying Variable Selection for Macroeconomic Forecasting: A Bayesian Regression Tree Approach"</strong>
-    (with <a href="https://sites.google.com/site/jaehoecon/home" target="_blank">Jaeho Kim</a> and <a href="https://faculty.korea.ac.kr/kufaculty/kyuho/index.do" target="_blank">Kyu Ho Kang</a>), 2024 October (new draft coming soon)
+    (with <a href="https://sites.google.com/site/jaehoecon/home" target="_blank">Jaeho Kim</a> and <a href="https://faculty.korea.ac.kr/kufaculty/kyuho/index.do" target="_blank">Kyu Ho Kang</a>), 2026 April
 
     <ul>
       <li>
