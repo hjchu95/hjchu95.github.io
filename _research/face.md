@@ -22,7 +22,9 @@ redirect_from:
 <ul>
   <li>
     <strong>
-        "Time-varying Variable Selection for Macroeconomic Forecasting: A Bayesian Regression Tree Approach"
+      <a href="{{ base_path }}/files/WP/TimeVaryingBVS-WorkingPaper.pdf" target="_blank" rel="noopener noreferrer">
+        Time-varying Variable Selection for Macroeconomic Forecasting: A Bayesian Regression Tree Approach
+      </a>
     </strong>
     (with <a href="https://sites.google.com/site/jaehoecon/home" target="_blank">Jaeho Kim</a> and 
     <a href="https://faculty.korea.ac.kr/kufaculty/kyuho/index.do" target="_blank">Kyu Ho Kang</a>), April 2026
@@ -33,11 +35,14 @@ redirect_from:
       <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6532738" target="_blank">SSRN Version</a>
       ]
     </p>
-    <div id="paper1" style="display:none; margin-top:15px; padding-left:15px; border-left: 3px solid #ccc; font-style: italic;">
+    <div id="paper1" style="display:block; margin-top:15px; padding-left:15px; border-left: 3px solid #ccc; font-style: italic;">
       <p>
         The growing availability of large datasets in macroeconomic forecasting has renewed interest in variable selection methods. However, most existing approaches assume stable relationships among variables, failing to account for the time-varying relevance of predictors due to nonlinear dynamics and structural changes in the economy. To address this issue, we propose a Bayesian Dirac Classification and Regression Tree (B-DART) model that jointly captures time-varying predictor relevance and performs regime-specific stochastic variable selection within a non-linear tree-based framework. Empirical results show that the proposed B-DART model delivers superior forecast accuracy relative to Bayesian CART and conventional stochastic variable selection models. These gains are especially pronounced during the post-COVID-19 period, which is characterized by heightened volatility and structural instability.
       </p>
     </div>
+    <p style="margin-top:10px;">
+      <strong>Presented at:</strong> The 3rd Tokyo–Taipei–Seoul Macroeconomics Network Workshop
+    </p>
 
   </li>
 </ul>
