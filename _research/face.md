@@ -28,6 +28,9 @@ redirect_from:
     </strong>
     (with <a href="https://sites.google.com/site/jaehoecon/home" target="_blank">Jaeho Kim</a> and 
     <a href="https://faculty.korea.ac.kr/kufaculty/kyuho/index.do" target="_blank">Kyu Ho Kang</a>), April 2026
+    <p style="margin:5px 0; font-style: italic;">
+    Submitted
+    </p>
     <p style="margin:5px 0;">
       [
       <a href="javascript:void(0);" onclick="toggleAbstract('paper1')">Abstract</a> |
