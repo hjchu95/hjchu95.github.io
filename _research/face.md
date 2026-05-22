@@ -41,7 +41,7 @@ redirect_from:
       </p>
     </div>
     <p style="margin-top:8px;margin-bottom:1px;">
-      <strong>Status:</strong> Submitted
+      <strong>Status:</strong> Under Review
     </p>
     <p style="margin:0px;">
       <strong>Presented at:</strong> The 3rd Tokyo–Taipei–Seoul Macroeconomics Network Workshop
