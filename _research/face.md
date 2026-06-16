@@ -9,6 +9,8 @@ redirect_from:
 
 {% include base_path %}
 
+<div class="research-content">
+
 <h2 style="border-bottom: none;">Publications</h2>
 
 <ul>
@@ -44,8 +46,10 @@ redirect_from:
       <strong>Status:</strong> Under Review
     </p>
     <p style="margin:0px;">
-      <strong>Presented at:</strong> The 3rd Tokyo–Taipei–Seoul Macroeconomics Network Workshop
+      <strong>Presented at:</strong> The 3rd Tokyo–Taipei–Seoul Macroeconomics Network Workshop; European Seminar on Bayesian Econometrics (ESOBE) 2026 Young Researchers Session (Scheduled)
     </p>
 
   </li>
 </ul>
+
+</div>
