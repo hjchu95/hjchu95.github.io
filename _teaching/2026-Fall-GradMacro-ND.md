@@ -24,4 +24,10 @@ show_prev_next: false
   <li><a href="{{ base_path }}/files/LN/macro1/5. finiteDP.pdf" target="_blank">5. Finite-space Dynamical Programming</a></li>
 </ul>
 
+**Solutions**
+<ul>
+  <li><a href="{{ base_path }}/files/LN/macro1/1. real_space_solution.pdf" target="_blank">1. Real Space Analysis Solution</a></li>
+  <li><a href="{{ base_path }}/files/LN/macro1/2. metric_space_solution.pdf" target="_blank">2. Metric Space Analysis Solution</a></li>
+</ul>
+
 [[Back to Previous Page]]({{ "/teaching" | relative_url }})
