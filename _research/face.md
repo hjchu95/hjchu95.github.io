@@ -46,7 +46,7 @@ redirect_from:
       <strong>Status:</strong> Under Review
     </p>
     <p style="margin:0px;">
-      <strong>Presented at:</strong> The 3rd Tokyo–Taipei–Seoul Macroeconomics Network Workshop; European Seminar on Bayesian Econometrics (ESOBE) 2026 Young Researchers Session (Scheduled)
+      <strong>Presented at:</strong> The 3rd Tokyo–Taipei–Seoul Macroeconomics Network Workshop; European Seminar on Bayesian Econometrics (ESOBE) 2026; 2026 Midwest Econometrics Group Annual Meeting (Scheduled)
     </p>
 
   </li>

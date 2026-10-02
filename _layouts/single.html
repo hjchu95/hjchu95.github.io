@@ -93,7 +93,7 @@ layout: default
 
       {% if page.share %}{% include social-share.html %}{% endif %}
 
-      {% unless page.collection == "projects" %}
+      {% unless page.collection == "projects" or "teaching" %}
         {% include post_pagination.html %}
       {% endunless %}
     </div>
